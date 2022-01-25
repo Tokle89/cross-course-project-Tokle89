@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "nirmala";
+  src: url(../fonts/nirmala.ttf) format("truetype");
+}
+@font-face {
+  font-family: "arial-rounded";
+  src: url(../fonts/Arial_Rounded_MT.ttf) format("truetype");
+}
+body {
+  font-family: nirmala, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dfe0ec;
+}
+h1 {
+  font-family: arial-rounded, Verdana, Geneva, Tahoma, sans-serif;
+}
+.logo {
+  font-family: bebas Neue, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
+  color: #2b63a4;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+header {
+  align-items: center;
+  padding: 15px 0px;
+  background-color: #2b63a4;
+  display: inline-flex;
+  position: relative;
+  width: 100%;
+}
+
+.shopping-cart {
+  position: absolute;
+  right: 0px;
+  color: white;
+  margin-right: 15px;
+}
+.logo-header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
+.hamburger {
+  color: white;
+  margin-left: 10px;
+}
+nav {
+  display: none;
+  position: fixed;
+  top: 45px;
+  background-color: #2b63a4;
+  border-radius: 5px;
+  z-index: 1000;
+}
+nav a {
+  display: block;
+  color: white;
+  padding: 15px 35px;
+  text-decoration: none;
+}
+#hamburger-menu {
+  display: none;
+}
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+/*links*/
+a {
+  text-decoration: none;
+}
+.cta {
+  background-color: #148387;
+  color: #f4f6f9;
+  font-size: 0.8em;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+/*main page*/
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background-color: white;
+  padding: 8px;
+  border-bottom: solid 2px #2b63a4;
+}
+.social-media a,
+i {
+  max-height: 28px;
+  max-width: 28px;
+  margin-top: 4px;
+  color: #2b63a4;
+}
+.social-media__h2 {
+  margin: auto 0px;
+  color: #2b63a4;
+  font-size: 2em;
+  margin-right: 10px;
+}
+.intro {
+  background-image: url(../images/free-shipping.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  min-height: 30vh;
+  position: relative;
+}
+.intro__content {
+  text-align: center;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+}
+.intro p {
+  font-family: arial-rounded, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  margin: 10px 0px 15px 0px;
+}
