@@ -6,9 +6,14 @@
   font-family: "arial-rounded";
   src: url(../fonts/Arial_Rounded_MT.ttf) format("truetype");
 }
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: nirmala, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #dfe0ec;
+  background-color: #e6ebf3;
+  margin: 0;
 }
 h1 {
   font-family: arial-rounded, Verdana, Geneva, Tahoma, sans-serif;
@@ -18,35 +23,42 @@ h1 {
   font-size: 2em;
   color: #2b63a4;
 }
-body {
-  margin: 0;
-  padding: 0;
+
+header,
+footer {
+  background-color: #2b63a4;
+  color: white;
 }
 header {
   align-items: center;
-  padding: 15px 0px;
-  background-color: #2b63a4;
-  display: inline-flex;
-  position: relative;
+  padding: 30px 0px;
+  display: flex;
+  position: fixed;
   width: 100%;
+  z-index: 999;
 }
 
 .shopping-cart {
   position: absolute;
-  right: 0px;
+  right: 10px;
+  order: 3;
   color: white;
-  margin-right: 15px;
 }
 .logo-header {
   position: absolute;
+  order: 2;
   left: 50%;
   transform: translateX(-50%);
   color: white;
 }
 .hamburger {
+  position: absolute;
+  top: 11px;
+  left: 10px;
+  order: 1;
   color: white;
-  margin-left: 10px;
 }
+
 nav {
   display: none;
   position: fixed;
@@ -67,6 +79,13 @@ nav a {
 #hamburger-menu:checked ~ nav {
   display: block;
 }
+footer {
+  text-align: center;
+  padding: 20px 0px;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
 /*links*/
 a {
   text-decoration: none;
@@ -79,46 +98,186 @@ a {
   border-radius: 5px;
   text-transform: uppercase;
 }
+.facebook {
+  height: 28px;
+}
 /*main page*/
 .social-media {
+  position: relative;
+  top: 60px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 15px;
   background-color: white;
-  padding: 8px;
+  padding: 0px 8px 8px 0px;
   border-bottom: solid 2px #2b63a4;
 }
-.social-media a,
-i {
-  max-height: 28px;
-  max-width: 28px;
-  margin-top: 4px;
+.social-media a {
+  margin-top: 8px;
   color: #2b63a4;
 }
 .social-media__h2 {
   margin: auto 0px;
   color: #2b63a4;
   font-size: 2em;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .intro {
+  margin-top: 60px;
   background-image: url(../images/free-shipping.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  min-height: 40vh;
   background-position-x: left;
-  min-height: 30vh;
-  position: relative;
+  background-position-y: top;
 }
 .intro__content {
+  position: relative;
   text-align: center;
-  position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40%;
+  max-width: 60%;
+  left: 35%;
+  top: 50px;
+  margin: 10px;
 }
+
 .intro p {
   font-family: arial-rounded, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1em;
-  margin: 10px 0px 15px 0px;
+  margin: 10px 0px 25px 0px;
+  color: #2b63a4;
+}
+.intro h1 p {
+  font-size: 1.2em;
+}
+.featured,
+.waterproof {
+  max-width: 1000px;
+  margin: 20px 50px;
+}
+.featured {
+  text-align: center;
+  max-width: 330px;
+  margin: 0 auto;
+}
+.featured__img {
+  width: 100%;
+}
+.featured h2 {
+  margin-bottom: 5px;
+  color: black;
+}
+.featured p {
+  text-align: left;
+  margin: 0;
+  color: black;
+  font-weight: bold;
+}
+.waterproof {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 330px;
+}
+.waterproof h2 {
+  order: 1;
+  color: #2b63a4;
+}
+
+.waterproof__img {
+  order: 2;
+  max-width: 330px;
+  margin: auto;
+  border-radius: 10%;
+  max-height: 100%;
+}
+.waterproof p {
+  order: 3;
+}
+.waterproof a {
+  order: 4;
+  align-self: center;
+}
+.waterproof__waterproof {
+  color: #2b63a4;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media (min-width: 400px) {
+  .featured p {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 800px) {
+  header {
+    position: absolute;
+  }
+  .hamburger {
+    display: none;
+  }
+  nav {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 60px;
+  }
+  nav a {
+    display: inline-block;
+    color: #2b63a4;
+    padding: 12px 35px;
+  }
+  .social-media {
+    justify-content: right;
+    font-size: 0.7em;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+  .logo-header {
+    left: 89px;
+  }
+  .cta {
+    font-size: 1.2em;
+    padding: 5px 20px;
+  }
+  .intro {
+    background-image: url(../images/free-shipping-big.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    min-height: 70vh;
+  }
+  .home-featured {
+    display: flex;
+    margin: 20px auto;
+    max-height: 600px;
+    max-width: 1000px;
+  }
+  .featured {
+    flex: 1;
+  }
+  .waterproof {
+    flex: 1;
+    max-height: 305px;
+  }
+  .intro__content {
+    position: relative;
+    text-align: center;
+    left: 35%;
+    top: 18vh;
+    margin: 10px;
+  }
+  .intro__content h1,
+  .intro p {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .intro__content {
+    left: 30%;
+  }
+  nav a {
+    font-size: 1.2em;
+    padding: 10px 35px;
+  }
 }
