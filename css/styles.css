@@ -14,13 +14,15 @@ body {
   font-family: nirmala, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e6ebf3;
   margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 h1 {
   font-family: arial-rounded, Verdana, Geneva, Tahoma, sans-serif;
 }
 .logo {
   font-family: bebas Neue, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2em;
+  font-size: 2.5em;
   color: #2b63a4;
 }
 
@@ -28,56 +30,67 @@ header,
 footer {
   background-color: #2b63a4;
   color: white;
+  width: 100%;
 }
 header {
-  align-items: center;
-  padding: 30px 0px;
-  display: flex;
-  position: fixed;
-  width: 100%;
+  position: sticky;
+  top: 0px;
   z-index: 999;
 }
-
-.shopping-cart {
-  position: absolute;
-  right: 10px;
-  order: 3;
-  color: white;
+.header-top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 10px 10px;
 }
 .logo-header {
+  color: white;
+  font-size: 2em;
   position: absolute;
-  order: 2;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
 }
-.hamburger {
-  position: absolute;
-  top: 11px;
-  left: 10px;
-  order: 1;
-  color: white;
-}
-
 nav {
   display: none;
   position: fixed;
-  top: 45px;
+  left: 0px;
+  top: 52px;
   background-color: #2b63a4;
-  border-radius: 5px;
-  z-index: 1000;
+  border-bottom: white solid 2px;
 }
 nav a {
-  display: block;
   color: white;
-  padding: 15px 35px;
-  text-decoration: none;
+  display: block;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-top: white solid 2px;
 }
 #hamburger-menu {
   display: none;
 }
 #hamburger-menu:checked ~ nav {
   display: block;
+}
+
+.social-media {
+  max-width: 100%;
+  display: flex;
+  gap: 15px;
+  padding: 5px;
+  background-color: white;
+  border-bottom: solid 2px #2b63a4;
+  justify-content: center;
+}
+.social-media a {
+  margin-top: 3px;
+  color: #2b63a4;
+}
+.social-media h1 {
+  margin: auto 0px;
+  color: #2b63a4;
+  font-size: 2em;
+  margin-right: 15px;
 }
 footer {
   text-align: center;
@@ -87,6 +100,10 @@ footer {
 }
 
 /*links*/
+
+.current {
+  text-decoration: underline;
+}
 a {
   text-decoration: none;
 }
@@ -102,29 +119,9 @@ a {
   height: 28px;
 }
 /*main page*/
-.social-media {
-  position: relative;
-  top: 60px;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  background-color: white;
-  padding: 0px 8px 8px 0px;
-  border-bottom: solid 2px #2b63a4;
-}
-.social-media a {
-  margin-top: 8px;
-  color: #2b63a4;
-}
-.social-media__h2 {
-  margin: auto 0px;
-  color: #2b63a4;
-  font-size: 2em;
-  margin-right: 15px;
-}
+
 .intro {
-  margin-top: 60px;
+  position: relative;
   background-image: url(../images/free-shipping.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -133,7 +130,7 @@ a {
   background-position-y: top;
 }
 .intro__content {
-  position: relative;
+  position: absolute;
   text-align: center;
   max-width: 60%;
   left: 35%;
@@ -146,7 +143,7 @@ a {
   margin: 10px 0px 25px 0px;
   color: #2b63a4;
 }
-.intro h1 p {
+.intro p {
   font-size: 1.2em;
 }
 .featured,
@@ -160,7 +157,7 @@ a {
   margin: 0 auto;
 }
 .featured__img {
-  width: 100%;
+  max-width: 100%;
 }
 .featured h2 {
   margin-bottom: 5px;
@@ -186,10 +183,9 @@ a {
 
 .waterproof__img {
   order: 2;
-  max-width: 330px;
+  max-width: 100%;
   margin: auto;
   border-radius: 10%;
-  max-height: 100%;
 }
 .waterproof p {
   order: 3;
@@ -211,54 +207,21 @@ a {
 }
 @media (min-width: 800px) {
   header {
-    position: absolute;
-  }
-  .hamburger {
-    display: none;
-  }
-  nav {
-    display: block;
-    position: absolute;
-    background-color: white;
-    top: 60px;
-  }
-  nav a {
-    display: inline-block;
-    color: #2b63a4;
-    padding: 12px 35px;
-  }
-  .social-media {
-    justify-content: right;
-    font-size: 0.7em;
-    padding-right: 10px;
-    padding-top: 4px;
-  }
-  .logo-header {
-    left: 89px;
+    position: static;
   }
   .cta {
     font-size: 1.2em;
     padding: 5px 20px;
   }
+
   .intro {
+    position: relative;
+    top: -10px;
     background-image: url(../images/free-shipping-big.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;
     min-height: 70vh;
-  }
-  .home-featured {
-    display: flex;
-    margin: 20px auto;
-    max-height: 600px;
-    max-width: 1000px;
-  }
-  .featured {
-    flex: 1;
-  }
-  .waterproof {
-    flex: 1;
-    max-height: 305px;
   }
   .intro__content {
     position: relative;
@@ -267,17 +230,47 @@ a {
     top: 18vh;
     margin: 10px;
   }
-  .intro__content h1,
   .intro p {
     font-size: 1.5em;
   }
+  .home-featured {
+    display: flex;
+    max-height: 600px;
+    max-width: 1000px;
+    margin: 10px auto;
+  }
+  .featured,
+  .waterproof {
+    flex: 1;
+  }
+  .featured h2,
+  .waterproof h2 {
+    margin-top: 0px;
+  }
+  .waterproof > * {
+    margin: 6px;
+  }
 }
 @media (min-width: 1200px) {
-  .intro__content {
-    left: 30%;
+  header label {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    position: static;
+    background-color: none;
+    border-bottom: none;
+    margin-top: 5px;
   }
   nav a {
-    font-size: 1.2em;
-    padding: 10px 35px;
+    display: inline;
+    color: white;
+    font-size: 1.3em;
+    padding: 15px;
+    border-top: none;
+  }
+  .intro__content {
+    left: 30%;
   }
 }
