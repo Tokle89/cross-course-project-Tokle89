@@ -38,25 +38,27 @@ header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 10px 10px;
 }
+
 .header-bottom {
   width: 100%;
   background-color: white;
   border-bottom: solid 2px #2b63a4;
 }
-
+.header-top i,
+.search-bar i {
+  font-size: 1.5em;
+}
 .logo-header {
   color: white;
   font-size: 2em;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  top: 5px;
 }
-.shopping-cart {
-  margin-right: 10px;
-}
+
 nav {
   display: none;
   position: fixed;
@@ -82,7 +84,7 @@ nav a {
   color: white;
   position: fixed;
   top: 10px;
-  right: 50px;
+  right: 55px;
 }
 .search {
   display: none;
@@ -302,6 +304,13 @@ a {
   header label {
     display: none;
   }
+  .header-top i {
+    font-size: 1.8em;
+    margin-top: 4px;
+  }
+  .logo-header {
+    top: 10px;
+  }
 
   nav {
     display: block;
@@ -320,6 +329,9 @@ a {
   .search {
     display: block;
     position: absolute;
+  }
+  .shopping-cart {
+    margin-right: 10px;
   }
   .social-media {
     justify-content: left;
