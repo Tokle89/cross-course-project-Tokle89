@@ -8,26 +8,59 @@
 }
 
 body {
-  font-family: nirmala, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-paragraph), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e6ebf3;
   margin: 0;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-h1 {
-  font-family: arial-rounded, Verdana, Geneva, Tahoma, sans-serif;
+h1,
+h2 {
+  font-family: var(--font-heading), Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6em;
 }
 .logo {
   font-family: bebas Neue, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2.5em;
-  color: #2b63a4;
+  color: var(--color-header__footer);
 }
-
+.search-button:hover,
+.social-media > * {
+  color: var(--color-header__footer);
+}
 header,
-footer {
-  background-color: #2b63a4;
-  color: white;
+footer,
+.logo-header,
+.shopping-cart,
+nav a,
+.search-icon,
+.search-button,
+.cta {
+  color: #fff;
+}
+header,
+footer,
+nav,
+.search-button {
+  background-color: var(--color-header__footer);
+}
+.header-bottom,
+.search,
+.search-button:hover,
+.cta:hover {
+  background-color: #fff;
+}
+header,
+footer,
+.header-bottom,
+img {
   width: 100%;
+}
+footer {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 1.2em;
+  max-height: 66px;
 }
 header {
   position: sticky;
@@ -43,36 +76,43 @@ header {
 
 .header-bottom {
   width: 100%;
-  background-color: white;
-  border-bottom: solid 2px #2b63a4;
+  border-bottom: solid 2px var(--color-header__footer);
 }
 .header-top i,
 .search-bar i {
   font-size: 1.5em;
 }
 .logo-header {
-  color: white;
   font-size: 2em;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   top: 5px;
 }
-
 nav {
   display: none;
   position: fixed;
   left: 0px;
   top: 45px;
-  background-color: #2b63a4;
-  border-bottom: white solid 2px;
 }
 nav a {
-  color: white;
   display: block;
   font-size: 1.2em;
   padding: 30px 25px;
   border-top: white solid 2px;
+}
+nav,
+nav a {
+  animation-name: show-nav;
+  transition-property: all;
+  left: -100px;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes show-nav {
+  100% {
+    left: 0px;
+  }
 }
 #hamburger-menu,
 #search-icon {
@@ -83,7 +123,6 @@ nav a {
   display: block;
 }
 .search-icon {
-  color: white;
   position: fixed;
   top: 10px;
   right: 55px;
@@ -93,27 +132,20 @@ nav a {
   position: fixed;
   right: 5px;
   top: 50px;
-  background-color: #e6ebf3;
   padding: 5px 5px;
 }
 
 .search-box {
-  border: solid 2px #2b63a4;
-  padding: 3px 0px;
+  border: solid 2px var(--color-header__footer);
+  padding: 4px 0px;
 }
 .search-button {
   border: none;
-  color: white;
-  background-color: #2b63a4;
   font-family: nirmala, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1em;
   padding-bottom: 4px;
-}
-.search-button:hover {
-  color: #2b63a4;
-  background-color: white;
-  border: solid 1px #2b63a4;
-  padding: 0px 3px 4px 3px;
+  border: solid 1px var(--color-header__footer);
+  transition: all ease-in 0.4s;
 }
 .social-media {
   max-width: 100%;
@@ -124,21 +156,32 @@ nav a {
 }
 .social-media a {
   margin-top: 3px;
-  color: #2b63a4;
 }
 .social-media h1 {
   margin: auto 0px;
-  color: #2b63a4;
   font-size: 1.5em;
   margin-right: 15px;
 }
-footer {
+.featured,
+.waterproof {
+  max-width: 330px;
+  margin: 30px auto;
   text-align: center;
-  padding: 20px 0px;
-  margin-top: 10px;
-  font-size: 1.2em;
 }
-
+.featured h2,
+.featured p {
+  margin: 0;
+  color: black;
+}
+.featured h2 {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.featured p {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
 /*links*/
 
 .current {
@@ -148,180 +191,15 @@ a {
   text-decoration: none;
 }
 .cta {
+  border: solid #148387 1px;
   background-color: #148387;
-  color: #f4f6f9;
   font-size: 0.8em;
   padding: 5px 10px;
   border-radius: 5px;
   text-transform: uppercase;
+  transition: all ease-in 0.4s;
 }
 .cta:hover {
-  border: solid #148387 1px;
-  background-color: white;
   color: #148387;
-}
-.facebook {
-  height: 28px;
-}
-/*main page*/
-
-.intro {
-  position: relative;
-  background-image: url(../images/free-shipping.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 40vh;
-  background-position-x: left;
-  background-position-y: top;
-}
-.intro__content {
-  position: absolute;
-  text-align: center;
-  max-width: 60%;
-  left: 35%;
-  top: 50px;
-  margin: 10px;
-}
-
-.intro p {
-  font-family: nirmala, Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0px 0px 25px 0px;
-  color: #211d99;
-  font-size: 1.2em;
-}
-
-.featured,
-.waterproof {
-  max-width: 330px;
-  margin: 20px 50px;
-  margin: 0 auto;
-  text-align: center;
-}
-.featured__img {
-  max-width: 100%;
-}
-.featured h2,
-.featured p {
-  color: black;
-}
-.featured h2 {
-  margin-bottom: 5px;
-  text-transform: capitalize;
-}
-.featured p {
-  text-align: left;
-  margin: 0;
-  font-weight: bold;
-}
-.waterproof {
-  display: flex;
-  flex-direction: column;
-}
-.waterproof h2 {
-  order: 1;
-  color: #2b63a4;
-  text-decoration: underline;
-}
-
-.waterproof__img {
-  order: 2;
-  max-width: 100%;
-  border-radius: 10%;
-}
-.waterproof p {
-  order: 3;
-}
-.waterproof a {
-  order: 4;
-  align-self: center;
-}
-.waterproof__bold-text {
-  color: #2b63a4;
-  text-transform: uppercase;
-  font-weight: bolder;
-}
-
-@media (min-width: 400px) {
-  .featured p {
-    font-size: 1.2em;
-  }
-}
-@media (min-width: 800px) {
-  .cta {
-    font-size: 1.2em;
-    padding: 5px 20px;
-  }
-
-  .intro {
-    background-image: url(../images/free-shipping-big.jpg);
-    background-position-y: center;
-    min-height: 70vh;
-  }
-  .intro__content {
-    top: 18vh;
-  }
-  .intro p {
-    font-size: 1.5em;
-  }
-  .home-featured {
-    display: flex;
-    max-height: 600px;
-    max-width: 1400px;
-    margin: 10px auto;
-  }
-  .featured,
-  .waterproof {
-    flex: 1;
-  }
-  .featured h2,
-  .waterproof h2 {
-    margin-top: 0px;
-  }
-  .waterproof > * {
-    margin: 6px;
-  }
-}
-@media (min-width: 1200px) {
-  header {
-    position: static;
-  }
-  header label {
-    display: none;
-  }
-  .header-top i {
-    font-size: 1.8em;
-    margin-top: 4px;
-  }
-  .logo-header {
-    top: 10px;
-  }
-
-  nav {
-    display: block;
-    position: static;
-    background-color: none;
-    border-bottom: none;
-    margin-top: 5px;
-  }
-  nav a {
-    display: inline;
-    color: white;
-    font-size: 1.3em;
-    padding: 15px;
-    border-top: none;
-  }
-  .search {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 62px;
-    padding: 0px;
-  }
-  .shopping-cart {
-    margin-right: 10px;
-  }
-  .social-media {
-    justify-content: left;
-    margin-left: 20px;
-  }
+  padding: 5px 9px;
 }

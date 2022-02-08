@@ -1,0 +1,38 @@
+main {
+  margin: 20px;
+}
+.collection {
+  max-width: 1400px;
+  margin: auto;
+}
+.collection__intro {
+  max-width: 600px;
+  color: var(--color-header__footer);
+  margin: 20px auto;
+}
+.collection h1 {
+  text-transform: capitalize;
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+.selling-points {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.featured__products {
+  width: 330px;
+}
+.featured__products h2 {
+  font-weight: 600;
+  font-size: 1.1em;
+  text-align: left;
+  margin-bottom: 0;
+}
+.products img {
+  max-height: 414px;
+}
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}

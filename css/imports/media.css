@@ -1,0 +1,87 @@
+@media (min-width: 400px) {
+  .featured p,
+  .collection p {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 800px) {
+  .cta {
+    font-size: 1.2em;
+    padding: 5px 20px;
+  }
+
+  .intro {
+    background-image: url(../../images/free-shipping-big.jpg);
+    background-position-y: center;
+    min-height: 60vh;
+  }
+
+  .intro__content {
+    top: 18vh;
+  }
+  .intro h2 {
+    font-size: 1.5em;
+  }
+  .home-featured {
+    display: flex;
+    max-width: 1400px;
+    margin: 10px auto;
+  }
+  .featured,
+  .waterproof {
+    flex: 1;
+  }
+  .featured h2,
+  .waterproof h2 {
+    margin-top: 0px;
+  }
+  .waterproof > * {
+    margin: 6px;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    position: static;
+  }
+  header label {
+    display: none;
+  }
+  .header-top i {
+    font-size: 1.8em;
+    margin: 4px 10px 0px 0px;
+  }
+  .logo-header {
+    top: 10px;
+  }
+
+  nav {
+    display: block;
+    position: static;
+    background-color: none;
+    border-bottom: none;
+    margin-top: 5px;
+  }
+  nav a {
+    display: inline;
+    font-size: 1.3em;
+    padding: 15px;
+    border-top: none;
+  }
+  .search {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 62px;
+    padding: 0px;
+  }
+  .social-media {
+    justify-content: left;
+    margin-left: 20px;
+  }
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
