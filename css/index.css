@@ -13,16 +13,18 @@
   top: 20px;
   margin: 10px;
 }
+.logo-intro {
+  color: var(--color-header__footer);
+}
 
 .intro h2 {
   margin: 0px 0px 25px 0px;
   color: #211d99;
   font-size: 1.2em;
   font-weight: bold;
+  text-transform: none;
 }
-.home-featured {
-  margin: 30px auto;
-}
+
 .waterproof {
   display: flex;
   flex-direction: column;
@@ -30,7 +32,6 @@
 }
 .waterproof h2 {
   order: 1;
-  color: var(--color-header__footer);
   text-decoration: underline;
 }
 
@@ -47,8 +48,6 @@
   order: 4;
   align-self: center;
 }
-.waterproof__bold-text {
+.bold-text {
   color: var(--color-header__footer);
-  text-transform: uppercase;
-  font-weight: bolder;
 }

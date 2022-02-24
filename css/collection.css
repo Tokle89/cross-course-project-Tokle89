@@ -11,25 +11,20 @@ main {
   margin: 20px auto;
 }
 .collection h1 {
-  text-transform: capitalize;
   text-decoration: underline;
   margin-bottom: 0;
 }
-.selling-points {
-  text-transform: uppercase;
-  font-weight: bold;
-}
+
 .featured__products {
-  width: 330px;
+  max-width: 292.55px;
 }
 .featured__products h2 {
-  font-weight: 600;
   font-size: 1.1em;
   text-align: left;
-  margin-bottom: 0;
+  font-weight: bold;
 }
 .products img {
-  max-height: 414px;
+  height: 414px;
 }
 .products {
   display: grid;

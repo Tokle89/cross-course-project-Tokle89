@@ -5,11 +5,16 @@
   }
 }
 @media (min-width: 800px) {
+  p {
+    font-size: 1.2em;
+  }
+
   .cta {
     font-size: 1.2em;
     padding: 5px 20px;
+    min-width: 135px;
+    text-align: center;
   }
-
   .intro {
     background-image: url(../../images/free-shipping-big.jpg);
     background-position-y: center;
@@ -25,7 +30,7 @@
   .home-featured {
     display: flex;
     max-width: 1400px;
-    margin: 10px auto;
+    margin: 30px auto;
   }
   .featured,
   .waterproof {
@@ -40,6 +45,62 @@
   }
   .products {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .product-specific {
+    flex-direction: row;
+    gap: 50px;
+    height: 450px;
+    padding: 40px 30px 30px 30px;
+  }
+  .product-specific h1 {
+    margin-top: -5px;
+  }
+  .product-specific ul {
+    font-size: 1.1em;
+  }
+  select {
+    padding: 5px;
+  }
+  .cart {
+    top: 30%;
+  }
+  .checkout {
+    flex-direction: row;
+    gap: 50px;
+  }
+  .reciet > * {
+    margin-top: 50px;
+  }
+  .registrer {
+    height: 574px;
+    margin: auto;
+    background-color: white;
+    border: solid 2px var(--color-header__footer);
+    padding: 0px 15px;
+  }
+  .form__checkout {
+    left: -110%;
+    top: 24.5%;
+  }
+  .about {
+    background-position: center;
+  }
+  .contact {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .contact > * {
+    flex: 1;
+  }
+  .contact-info h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+
+  .contact-info__content i {
+    margin-top: 21px;
   }
 }
 @media (min-width: 1200px) {
@@ -60,7 +121,6 @@
   nav {
     display: block;
     position: static;
-    background-color: none;
     border-bottom: none;
     margin-top: 5px;
   }
@@ -83,5 +143,8 @@
   }
   .products {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .form__checkout {
+    top: 25%;
   }
 }

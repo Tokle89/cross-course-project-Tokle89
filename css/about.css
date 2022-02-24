@@ -1,0 +1,32 @@
+.about {
+  background: url(../images/about-mobile.jpg) top no-repeat;
+  background-size: cover;
+}
+
+.about__content {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 0px 10px;
+  animation: about__content 1s forwards;
+  border: solid 2px var(--color-header__footer);
+  opacity: 0;
+}
+@keyframes about__content {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.about__content h1 {
+  margin: 3px;
+}
+
+.about__content p {
+  color: var(--color-header__footer);
+  margin: 5px;
+}

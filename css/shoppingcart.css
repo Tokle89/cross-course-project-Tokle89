@@ -1,0 +1,10 @@
+main {
+  margin: 40px auto;
+}
+
+.bottom-cta {
+  max-width: 436px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}

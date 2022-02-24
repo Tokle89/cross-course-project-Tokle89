@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Complete your purchase" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/checkout.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/1f3258fb33.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>RainyDays | Checkout</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <a href="index.html" class="logo logo-header">Rainy days</a>
+        <a href="shoppingcart.html" class="shopping-cart"><i class="fas fa-shopping-cart fa-2x"></i></a>
+        <label for="hamburger-menu"><i class="fas fa-bars fa-2x"></i></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="collection.html">Collection</a>
+          <a href="contact.html">Contact us</a>
+          <a href="about.html">About us</a>
+        </nav>
+      </div>
+      <div class="header-bottom">
+        <div class="search-bar">
+          <label for="search-icon"> <i class="fas fa-search fa-2x search-icon"></i></label>
+          <input type="checkbox" id="search-icon" />
+          <form method="post" class="search">
+            <input type="search" id="site-search" name="search" class="search-box border" aria-label="search trough site content" />
+            <button class="search-button">Search</button>
+          </form>
+        </div>
+        <div class="social-media">
+          <h2>Follow us:</h2>
+          <a href="https://www.facebook.com"><i class="fab fa-facebook fa-2x facebook"></i></a>
+          <a href="https://www.instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="https://www.twitter.com"><i class="fab fa-twitter-square fa-2x"></i></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="checkout">
+        <section class="shoppingcart-content content-square">
+          <div class="shoppingcart-content__product">
+            <img src="images/brown-jacket-square.jpg" class="featured__img" alt="man wearing the offpistjacket outside" />
+            <div>
+              <h2>Offpist jacket</h2>
+              <p>99 eur</p>
+            </div>
+          </div>
+          <div class="remove">
+            <p>remove</p>
+            <i class="fas fa-trash-alt fa-2x"></i>
+          </div>
+          <div class="shipment-info">
+            <p>Shippment: 3-5 working days</p>
+            <p>Payment: An innvoice will be delivered</p>
+          </div>
+          <section class="cost">
+            <div class="cost-info">
+              <p>Sub total:</p>
+              <p>99 eur</p>
+            </div>
+            <div class="cost-info">
+              <p>Shipping:</p>
+              <p>0 eur</p>
+            </div>
+            <div class="cost-info">
+              <p>Grand total:</p>
+              <p>99 eur</p>
+            </div>
+          </section>
+        </section>
+        <section class="registrer">
+          <h2>Please registrer your information</h2>
+          <div class="form-wrapper">
+            <form action="purchase-complete.html" method="get">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required />
+              <label for="date">Day of birth</label>
+              <input type="date" id="date" name="day of birth" min="1900-01-01" max="2022-01-01" required />
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required />
+              <label for="adress">Street adress</label>
+              <input type="text" id="adress" name="adress" required />
+              <label for="city">city</label>
+              <input type="text" id="city" name="city" required />
+              <label for="country">Country</label>
+              <input type="text" id="country" name="country" required />
+              <div class="form form__checkout">
+                <div>
+                  <p>size:</p>
+                  <select name="size">
+                    <option value="size small">Small</option>
+                    <option value="size medium">Medium</option>
+                    <option value="size large">Large</option>
+                    <option value="size extra large">Extra large</option>
+                  </select>
+                </div>
+                <div>
+                  <p>quantity:</p>
+                  <select name="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div>
+              <input type="submit" value="checkout" class="cta cta-form" />
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>copyright &copy;</footer>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+main {
+  margin: 40px auto;
+  position: relative;
+}
+.checkout {
+  display: flex;
+  flex-direction: column;
+}
+.checkout > * {
+  flex: 1;
+}
+
+.registrer {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.registrer h2 {
+  text-decoration: underline;
+}
+.form-wrapper > * {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-align: left;
+}
+.form-wrapper input {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: solid 2px var(--color-header__footer);
+}
+.form-wrapper .cta {
+  padding: 5px 9px;
+}
+.form__checkout {
+  position: absolute;
+  left: 20px;
+  top: -70%;
+}
+.remove {
+  margin-top: 80px;
+}
