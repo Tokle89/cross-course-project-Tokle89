@@ -1,9 +1,12 @@
 main {
   margin: 40px auto;
-  position: relative;
 }
-.checkout {
+.checkout,
+.form-wrapper > * {
   display: flex;
+}
+.checkout,
+.form-wrapper > * {
   flex-direction: column;
 }
 .checkout > * {
@@ -13,14 +16,11 @@ main {
 .registrer {
   text-align: center;
   position: relative;
-  margin-bottom: 30px;
 }
 .registrer h2 {
   text-decoration: underline;
 }
 .form-wrapper > * {
-  display: flex;
-  flex-direction: column;
   font-weight: bold;
   text-align: left;
 }
@@ -31,12 +31,10 @@ main {
   border: solid 2px var(--color-header__footer);
 }
 .form-wrapper .cta {
-  padding: 5px 9px;
+  padding: 5px 20px;
 }
 .form__checkout {
   position: absolute;
-  left: 20px;
-  top: -70%;
 }
 .remove {
   margin-top: 80px;

@@ -68,9 +68,7 @@
     flex-direction: row;
     gap: 50px;
   }
-  .reciet > * {
-    margin-top: 50px;
-  }
+
   .registrer {
     height: 574px;
     margin: auto;
@@ -89,7 +87,6 @@
     display: flex;
     flex-direction: row-reverse;
     max-width: 1200px;
-    margin: auto;
   }
   .contact > * {
     flex: 1;
@@ -100,7 +97,10 @@
   }
 
   .contact-info__content i {
-    margin-top: 21px;
+    margin-top: 23px;
+  }
+  .h1 {
+    font-size: 1em;
   }
 }
 @media (min-width: 1200px) {
