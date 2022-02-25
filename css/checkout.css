@@ -1,6 +1,9 @@
 main {
   margin: 40px auto;
 }
+h1 {
+  text-align: center;
+}
 .checkout,
 .form-wrapper > * {
   display: flex;
