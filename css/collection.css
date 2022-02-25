@@ -18,9 +18,11 @@ main {
   max-width: 292.55px;
 }
 .featured__products h2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   text-align: left;
   font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3px;
 }
 .products img {
   height: 414px;

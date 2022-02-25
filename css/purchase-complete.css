@@ -13,7 +13,6 @@ main {
 .checkout > * {
   flex: 1;
 }
-
 .content-square {
   margin: 10px;
   padding: 15px;
@@ -23,14 +22,11 @@ main {
   margin-bottom: 4px;
   text-decoration: underline;
 }
-.shoppingcart-content__product p {
-  font-weight: 100;
-}
-.shipment-info {
-  margin-top: 10px;
+.shipment-info p {
+  margin: 8px 0px;
 }
 .reciet {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }

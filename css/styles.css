@@ -208,6 +208,7 @@ a {
 }
 .featured p {
   text-align: left;
+  font-weight: bold;
 }
 .form {
   display: flex;
@@ -262,7 +263,7 @@ select {
 .shoppingcart-content__product h2,
 .shoppingcart-content__product p {
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: 0.9em;
   margin-top: 0px;
 }
 .shoppingcart-content__product h2,

@@ -58,6 +58,10 @@
   .product-specific ul {
     font-size: 1.1em;
   }
+  .shoppingcart-content__product h2,
+  .shoppingcart-content__product p {
+    font-size: 1.1em;
+  }
   select {
     padding: 5px;
   }

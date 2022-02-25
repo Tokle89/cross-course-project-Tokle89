@@ -35,6 +35,8 @@ main {
 }
 .form__checkout {
   position: absolute;
+  top: -72%;
+  left: 18px;
 }
 .remove {
   margin-top: 80px;
