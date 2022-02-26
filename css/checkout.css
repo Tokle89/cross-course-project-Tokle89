@@ -38,7 +38,7 @@ h1 {
 }
 .form__checkout {
   position: absolute;
-  top: -390px;
+  top: -410px;
   left: 21px;
 }
 .remove {
@@ -46,6 +46,6 @@ h1 {
 }
 input[type="date"] {
   -webkit-appearance: none;
-  height: 39px;
+  height: 19px;
   background-color: #fff;
 }
