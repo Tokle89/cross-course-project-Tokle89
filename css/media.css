@@ -3,7 +3,7 @@
     font-size: 1.2em;
   }
   .form__checkout {
-    top: -24em;
+    top: -25em;
   }
 }
 @media (min-width: 800px) {
@@ -77,8 +77,8 @@
     padding: 0px 15px;
   }
   .form__checkout {
-    left: -27em;
-    top: 24.5%;
+    left: -28em;
+    top: 145px;
   }
   .about {
     background-position: bottom;
