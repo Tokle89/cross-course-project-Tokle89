@@ -6,9 +6,11 @@ main {
   margin: auto;
 }
 .collection__intro {
-  max-width: 600px;
-  color: var(--color-header__footer);
+  max-width: 500px;
   margin: 20px auto;
+}
+.collection__intro p {
+  margin-top: 5px;
 }
 .collection h1 {
   text-decoration: underline;
