@@ -1,6 +1,5 @@
 @media (min-width: 400px) {
-  .featured p,
-  .collection p {
+  .featured p {
     font-size: 1.2em;
   }
   .form__checkout {
@@ -8,10 +7,6 @@
   }
 }
 @media (min-width: 800px) {
-  p {
-    font-size: 1.2em;
-  }
-
   .cta {
     font-size: 1.2em;
     padding: 5px 20px;
@@ -58,9 +53,7 @@
   .product-specific h1 {
     margin-top: -5px;
   }
-  .product-specific ul {
-    font-size: 1.1em;
-  }
+
   .shoppingcart-content__product h2,
   .shoppingcart-content__product p {
     font-size: 1.1em;
@@ -102,10 +95,10 @@
     font-size: 1.5em;
     margin-top: 20px;
   }
-
-  .contact-info__content i {
-    margin-top: 23px;
+  .contact-info__content {
+    margin-bottom: 38px;
   }
+
   .h1 {
     font-size: 1em;
   }
@@ -133,7 +126,7 @@
   }
   nav a {
     display: inline;
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding: 15px;
     border-top: none;
   }

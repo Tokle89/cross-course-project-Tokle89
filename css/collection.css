@@ -9,8 +9,9 @@ main {
   max-width: 500px;
   margin: 20px auto;
 }
-.collection__intro p {
-  margin-top: 5px;
+.collection__intro p,
+.collection h1 {
+  margin: 5px;
 }
 .collection h1 {
   text-decoration: underline;
