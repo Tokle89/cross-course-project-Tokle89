@@ -149,6 +149,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
   .form__checkout {
-    top: 25%;
+    top: 9em;
+    left: -27.2em;
+  }
+  #date {
+    min-width: 230.95px;
   }
 }

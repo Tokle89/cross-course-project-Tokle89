@@ -38,8 +38,8 @@ h1 {
 }
 .form__checkout {
   position: absolute;
-  top: -72%;
-  left: 18px;
+  top: -24em;
+  left: 21px;
 }
 .remove {
   margin-top: 80px;
