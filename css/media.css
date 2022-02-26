@@ -3,6 +3,9 @@
   .collection p {
     font-size: 1.2em;
   }
+  .form__checkout {
+    top: -24em;
+  }
 }
 @media (min-width: 800px) {
   p {
@@ -81,7 +84,7 @@
     padding: 0px 15px;
   }
   .form__checkout {
-    left: -110%;
+    left: -27em;
     top: 24.5%;
   }
   .about {
@@ -147,12 +150,5 @@
   }
   .products {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .form__checkout {
-    top: 9em;
-    left: -27.2em;
-  }
-  #date {
-    min-width: 230.95px;
   }
 }
