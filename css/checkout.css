@@ -44,6 +44,6 @@ h1 {
 .remove {
   margin-top: 80px;
 }
-input #date {
+input[type="date"] {
   -webkit-appearance: none;
 }
