@@ -130,13 +130,6 @@
     padding: 15px;
     border-top: none;
   }
-  .search {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 62px;
-    padding: 0px;
-  }
   .social-media {
     justify-content: left;
     margin-left: 20px;

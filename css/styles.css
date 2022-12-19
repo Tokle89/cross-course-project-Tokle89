@@ -1,13 +1,6 @@
 @import "imports/variables.css";
+@import "imports/typography.css";
 
-@font-face {
-  font-family: "nirmala";
-  src: url(../fonts/nirmala.ttf) format("truetype");
-}
-@font-face {
-  font-family: "arial-rounded";
-  src: url(../fonts/Arial_Rounded_MT.ttf) format("truetype");
-}
 body {
   font-family: var(--font-paragraph), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e6ebf3;
@@ -16,40 +9,24 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-h1,
-h2 {
-  font-family: var(--font-heading), Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1.4em;
-  text-transform: capitalize;
-}
-.logo {
-  font-family: bebas Neue, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2.5em;
-}
+
 header,
 footer,
 i,
 a,
-.search-button,
 .cta {
   color: #fff;
 }
-h1,
-h2,
-.social-media i,
 .blue-i,
 .search-button:hover {
   color: var(--color-header__footer);
 }
 header,
 footer,
-nav,
-.search-button {
+nav {
   background-color: var(--color-header__footer);
 }
 .header-bottom,
-.search,
-.search-button:hover,
 .cta:hover {
   background-color: #fff;
 }
@@ -71,18 +48,14 @@ header {
 }
 .header-top {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
   padding: 10px 10px;
 }
 
 .header-bottom {
   width: 100%;
-  border-bottom: solid 2px var(--color-header__footer);
   padding: 3px 0px;
 }
-.header-top i,
-.search-bar i {
+.header-top i {
   font-size: 1.5em;
 }
 .logo-header {
@@ -90,8 +63,6 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -20px;
-  width: 110px;
 }
 nav {
   display: none;
@@ -116,40 +87,13 @@ nav a {
     left: 0px;
   }
 }
-#hamburger-menu,
-#search-icon {
+#hamburger-menu {
   display: none;
 }
-#hamburger-menu:checked ~ nav,
-#search-icon:checked ~ .search {
+#hamburger-menu:checked ~ nav {
   display: block;
 }
-.search,
-.search-icon {
-  position: fixed;
-}
-.search-icon {
-  top: 10px;
-  right: 55px;
-}
-.search {
-  display: none;
-  right: 5px;
-  top: 50px;
-  padding: 5px 5px;
-}
 
-.search-box {
-  border: solid 2px var(--color-header__footer);
-  padding: 4px 0px;
-}
-.search-button {
-  font-family: nirmala, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1em;
-  padding-bottom: 4px;
-  border: solid 1px var(--color-header__footer);
-  transition: all ease-in 0.4s;
-}
 .social-media {
   display: flex;
   gap: 15px;
@@ -159,7 +103,7 @@ nav a {
 
 .social-media h2 {
   margin: auto 0px;
-  font-size: 1.3em;
+  font-size: 1em;
   margin-right: 15px;
 }
 /*links*/

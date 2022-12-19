@@ -1,5 +1,11 @@
 :root {
-  --font-heading: "roboto";
-  --font-paragraph: "nirmala";
-  --color-header__footer: #2b63a4;
+  --font-heading: "Source sans pro";
+  --font-paragraph: "Open-Sans";
+  --font-logo: "Roboto";
+  --color-header__footer: #355881;
+}
+
+@font-face {
+  font-family: "nirmala";
+  src: url(../fonts/nirmala.ttf) format("truetype");
 }
