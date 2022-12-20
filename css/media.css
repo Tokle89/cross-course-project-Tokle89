@@ -7,8 +7,21 @@
   }
 }
 @media (min-width: 800px) {
+  h1,
+  h2 {
+    font-size: 1.4em;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 0.85em;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
   .cta {
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 5px 20px;
     min-width: 135px;
     text-align: center;
@@ -18,29 +31,45 @@
     background-position-y: center;
     min-height: 60vh;
   }
-
-  .intro__content {
-    top: 18vh;
-  }
-  .intro h2 {
-    font-size: 1.5em;
-  }
-  .home-featured {
+  .intro_content-container {
+    background-color: var(--quaternary-color);
+    width: 50%;
+    margin-left: auto;
+    min-height: 60vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro_content {
+    max-width: 300px;
+  }
+
+  .home-featured {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-between;
     max-width: 1400px;
-    margin: 30px auto;
+    align-items: center;
   }
-  .featured,
-  .waterproof {
-    flex: 1;
+  .featured {
+    margin: auto;
   }
-  .featured h2,
-  .waterproof h2 {
-    margin-top: 0px;
+  .waterproof_container {
+    flex-direction: row-reverse;
+    max-width: 800px;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+    padding: 30px 10px;
+    background: #0d324d;
   }
-  .waterproof > * {
-    margin: 6px;
+  .waterproof img {
+    height: 250px;
+    width: 300px;
+    margin-top: 20px;
   }
+
   .products {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -107,12 +136,23 @@
   header {
     position: static;
   }
+  .header-bottom {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 13px;
+  }
   header label {
     display: none;
   }
-  .header-top i {
-    font-size: 1.8em;
-    margin: 4px 10px 0px 0px;
+  .shopping-cart {
+    color: var(--color-header__footer);
+    position: absolute;
+    right: 1%;
+  }
+  header i {
+    font-size: 1.3em;
   }
   .logo-header {
     top: 5px;
@@ -122,18 +162,13 @@
     display: block;
     position: static;
     border-bottom: none;
-    margin-top: 5px;
   }
   nav a {
     display: inline;
-    font-size: 1.2em;
     padding: 15px;
     border-top: none;
   }
-  .social-media {
-    justify-content: left;
-    margin-left: 20px;
-  }
+
   .products {
     grid-template-columns: repeat(3, 1fr);
   }

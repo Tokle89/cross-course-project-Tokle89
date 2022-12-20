@@ -1,34 +1,25 @@
 @import "imports/variables.css";
 @import "imports/typography.css";
+@import "imports/links.css";
 
 body {
-  font-family: var(--font-paragraph), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e6ebf3;
   margin: 0;
+}
+main {
+  max-width: 1400px;
+  margin: 0 auto;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
 }
 
 header,
 footer,
-i,
-a,
-.cta {
+.header-top i {
   color: #fff;
 }
-.blue-i,
-.search-button:hover {
-  color: var(--color-header__footer);
-}
-header,
-footer,
-nav {
+
+.header-top,
+footer {
   background-color: var(--color-header__footer);
-}
-.header-bottom,
-.cta:hover {
-  background-color: #fff;
 }
 
 img {
@@ -47,16 +38,12 @@ header {
   z-index: 999;
 }
 .header-top {
-  display: flex;
   padding: 10px 10px;
 }
-
-.header-bottom {
-  width: 100%;
-  padding: 3px 0px;
-}
-.header-top i {
-  font-size: 1.5em;
+.header-bottom,
+.header-top_container {
+  max-width: 1400px;
+  margin: auto;
 }
 .logo-header {
   font-size: 2em;
@@ -72,6 +59,7 @@ nav {
 }
 nav a {
   display: block;
+  color: var(--color-header__footer);
   font-size: 1.2em;
   padding: 30px 25px;
   border-top: white solid 2px;
@@ -98,60 +86,28 @@ nav a {
   display: flex;
   gap: 15px;
   padding: 5px;
-  justify-content: center;
 }
 
 .social-media h2 {
   margin: auto 0px;
-  font-size: 1em;
-  margin-right: 15px;
+  font-size: 1.2em;
+  font-weight: lighter;
 }
-/*links*/
 
-.current {
-  text-decoration: underline;
+/* product container  */
+.product-container {
+  max-width: 300px;
 }
-a {
-  text-decoration: none;
+.product-container > * {
+  color: var(--tertiary-color);
 }
-.cta {
-  border: solid #148387 1px;
-  background-color: #148387;
-  min-width: 84px;
-  text-align: center;
-  font-size: 0.8em;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  transition: all ease-in 0.4s;
+
+.product-container_text {
+  display: flex;
+  justify-content: space-between;
 }
-.cta:hover {
-  color: #148387;
-  padding: 5px 9px;
-}
-.cta-form {
-  box-sizing: content-box;
-  max-width: 200.65px;
-  padding: 5px 20px;
-  margin: 10px auto;
-}
-/*styles for main content*/
-.featured,
-.waterproof {
-  max-width: 330px;
-  margin: 30px auto;
-  text-align: center;
-}
-.featured h2,
-.featured p {
-  margin: 0;
-  color: black;
-}
-.featured h2 {
-  margin-bottom: 5px;
-}
-.featured p {
-  text-align: left;
+.product-container_text > * {
+  margin: 8px 0px;
   font-weight: bold;
 }
 .form {
