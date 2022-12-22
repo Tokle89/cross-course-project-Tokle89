@@ -9,6 +9,7 @@ nav a,
   font-family: var(--font-heading), "Times New Roman", Times, serif;
   font-size: 1.2em;
   font-weight: lighter;
+  text-transform: capitalize;
 }
 
 p {
