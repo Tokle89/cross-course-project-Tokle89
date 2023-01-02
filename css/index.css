@@ -29,6 +29,9 @@
   text-align: center;
   margin: 25px;
 }
+.featured h2 {
+  text-decoration: underline;
+}
 .featured .product-container {
   margin: 0 auto;
 }

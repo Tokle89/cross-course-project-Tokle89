@@ -1,5 +1,6 @@
 @media (min-width: 600px) {
-  p {
+  p,
+  li {
     font-size: 0.85em;
   }
 
@@ -101,24 +102,25 @@
 
   .products {
     grid-template-columns: repeat(2, 1fr);
+    gap: 150px;
   }
+  /* detais page  */
   .product-specific {
     flex-direction: row;
-    gap: 50px;
-    height: 450px;
+    gap: 100px;
     padding: 40px 30px 30px 30px;
   }
+
   .product-specific h1 {
     margin-top: -5px;
+    font-weight: bold;
   }
 
   .shoppingcart-content__product h2,
   .shoppingcart-content__product p {
     font-size: 1.1em;
   }
-  select {
-    padding: 5px;
-  }
+
   .cart {
     top: 30%;
   }
@@ -184,11 +186,12 @@
   .waterproof img {
     height: 250px;
     width: 300px;
-    margin-top: 20px;
+    margin-top: 30px;
     padding-left: 45px;
   }
 
   .products {
     grid-template-columns: repeat(3, 1fr);
+    gap: 200px;
   }
 }

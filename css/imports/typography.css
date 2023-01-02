@@ -2,6 +2,12 @@
   font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2em;
 }
+p,
+li {
+  font-family: var(--font-paragraph), Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.75em;
+}
+
 h1,
 h2,
 nav a,
@@ -10,9 +16,4 @@ nav a,
   font-size: 1.2em;
   font-weight: lighter;
   text-transform: capitalize;
-}
-
-p {
-  font-family: var(--font-paragraph), Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 0.75em;
 }
