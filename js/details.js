@@ -41,13 +41,12 @@ const createHtml = () => {
                   <p class="price"> ${product.price}</p>
                   <form  method="post"class="form">
                   <div>
-                    <p>quantity:</p>
-                    <select name="quantity">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
+                    <p>size:</p>
+                    <select name="Size">
+                      <option value="small">Small</option>
+                      <option value="medium">Medium</option>
+                      <option value="large">Large</option>
+                      <option value="xtra large">Xtra Large</option>
                     </select>
                   </div>
                 </form>
@@ -65,6 +64,18 @@ const displayMessage = (message) => {
   console.log("hello");
 };
 
-btn.addEventListener("click", displayMessage);
+const sizeValue = document.querySelector("select");
+let counter = localStorage.getItem("counter");
+counter++;
 
-console.log("click");
+btn.onclick = function (event) {
+  Object.assign(product, { size: sizeValue.value });
+
+  localStorage.setItem("itemList" + counter, JSON.stringify(product));
+
+  localStorage.setItem("counter", counter);
+
+  console.log(product);
+};
+
+allStorage();
