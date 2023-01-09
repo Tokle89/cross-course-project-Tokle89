@@ -8,6 +8,7 @@ const msg = document.querySelector(".cart");
 import { products } from "./products.js";
 
 const product = products.find(({ name }) => name == id);
+export const productName = product.name;
 
 const createHtml = () => {
   pageTitle.innerHTML = ` ${product.name}`;
@@ -59,23 +60,18 @@ createHtml();
 
 const btn = document.querySelector(".cta-cart");
 
-const displayMessage = (message) => {
+const displayMessage = () => {
   msg.style.display = "block";
-  console.log("hello");
 };
 
 const sizeValue = document.querySelector("select");
-let counter = localStorage.getItem("counter");
-counter++;
 
-btn.onclick = function (event) {
+btn.onclick = function () {
   Object.assign(product, { size: sizeValue.value });
 
-  localStorage.setItem("itemList" + counter, JSON.stringify(product));
+  localStorage.setItem(productName, JSON.stringify(product));
 
-  localStorage.setItem("counter", counter);
+  displayMessage;
 
   console.log(product);
 };
-
-allStorage();
