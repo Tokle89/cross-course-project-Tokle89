@@ -15,18 +15,6 @@ const createHtml = (product) => {
                                  </div>`;
 };
 
-// products.forEach((product) => {
-//   let parsedProducts = JSON.parse(product);
-
-//   createHtml(parsedProducts);
-// });
-
-const deleteBtn = document.querySelectorAll(".delete-btn");
-
-deleteBtn.forEach((button) => {
-  console.log(array.name);
-});
-
 let array = [];
 
 function getItems() {
@@ -40,8 +28,15 @@ function getItems() {
 }
 
 getItems();
-console.log(array);
 
 array.forEach((product) => {
   createHtml(product);
+});
+
+const deleteBtn = document.querySelectorAll(".delete-btn");
+
+deleteBtn.forEach((button) => {
+  button.onclick = function () {
+    console.log(array);
+  };
 });
