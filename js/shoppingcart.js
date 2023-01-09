@@ -15,14 +15,33 @@ const createHtml = (product) => {
                                  </div>`;
 };
 
-products.forEach((product) => {
-  let parsedProducts = JSON.parse(product);
+// products.forEach((product) => {
+//   let parsedProducts = JSON.parse(product);
 
-  createHtml(parsedProducts);
-});
+//   createHtml(parsedProducts);
+// });
 
 const deleteBtn = document.querySelectorAll(".delete-btn");
 
 deleteBtn.forEach((button) => {
-  console.log("hello");
+  console.log(array.name);
+});
+
+let array = [];
+
+function getItems() {
+  products.forEach((product) => {
+    let parsedProducts = JSON.parse(product);
+
+    array.push(parsedProducts);
+  });
+
+  return array;
+}
+
+getItems();
+console.log(array);
+
+array.forEach((product) => {
+  createHtml(product);
 });
