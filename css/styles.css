@@ -171,12 +171,17 @@ select {
   max-width: 400px;
   padding: 17px 17px 0px 17px;
 }
-
+.shoppingcart-content__product,
 .remove,
 .cost-info {
   display: flex;
 }
-
+.shoppingcart-content__product {
+  gap: 10px;
+}
+.shoppingcart-content__product > * {
+  flex: 1;
+}
 .shoppingcart-content__product h2 {
   margin-bottom: 0px;
   color: black;
