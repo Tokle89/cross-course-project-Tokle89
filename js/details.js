@@ -5,13 +5,15 @@ const pageTitle = document.all[14];
 const metaContentDescription = document.all[5];
 const productSection = document.querySelector(".product-specific");
 const msg = document.querySelector(".cart");
+import { cart } from "./function/cart.js";
 import { products } from "./products.js";
+import { createCart } from "./function/cart.js";
+import { addItemToCart } from "./function/cart.js";
 
 const product = products.find(({ name }) => name == id);
-export const productName = product.name;
 
-const createHtml = () => {
-  pageTitle.innerHTML = ` ${product.name}`;
+const createHtml = (product) => {
+  pageTitle.innerHTML = product.name;
   metaContentDescription.content = `view our amazing ${product.name}`;
 
   productSection.innerHTML = `<div class="product-image__container">
@@ -56,7 +58,7 @@ const createHtml = () => {
   return productSection.innerHTML;
 };
 
-createHtml();
+createHtml(product);
 
 const btn = document.querySelector(".cta-cart");
 
@@ -68,10 +70,8 @@ const sizeValue = document.querySelector("select");
 
 btn.onclick = function () {
   Object.assign(product, { size: sizeValue.value });
-
-  localStorage.setItem(productName, JSON.stringify(product));
-
-  displayMessage;
+  createCart(cart);
+  addItemToCart(product);
 
   console.log(product);
 };
