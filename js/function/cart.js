@@ -41,7 +41,7 @@ export function removeFromCart(deleteBTn) {
   deleteBtn.forEach((button) => {
     button.onclick = function () {
       console.log(button.id);
-      let product = cart.find((element) => element.id == button.id);
+
       if (!product) {
         return;
       } else {
