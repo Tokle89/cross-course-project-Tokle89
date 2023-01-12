@@ -84,3 +84,8 @@ li:before {
   position: relative;
   bottom: -25px;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+}

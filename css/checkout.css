@@ -7,18 +7,25 @@ h1 {
 .checkout,
 .form-wrapper > * {
   display: flex;
-}
-.checkout,
-.form-wrapper > * {
   flex-direction: column;
 }
+
+.checkout {
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
 .checkout > * {
-  flex: 1;
+  width: 300px;
 }
 
 .registrer {
   text-align: center;
-  position: relative;
+  height: 574px;
+  background-color: white;
+  border: solid 2px var(--color-header__footer);
+  padding: 0px 15px;
 }
 .registrer h2 {
   text-decoration: underline;
@@ -28,24 +35,38 @@ h1 {
   text-align: left;
 }
 .form-wrapper input {
-  padding: 10px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  border: solid 2px var(--color-header__footer);
+  border-radius: 3px;
+  padding: 8px;
+  box-shadow: 0px 3px 2px 1px rgba(34, 34, 34, 0.39);
+  border: 1px solid var(--tertiary-color);
+  font-family: var(--font-paragraph);
+  margin-top: 5px;
+}
+
+.form-wrapper label {
+  margin-top: 10px;
 }
 .form-wrapper .cta {
   padding: 5px 20px;
+  margin-top: 50px;
 }
 .form__checkout {
   position: absolute;
   top: -410px;
   left: 21px;
 }
-.remove {
-  margin-top: 80px;
+
+.form-error {
+  color: #ab051e;
+  font-family: var(--font-paragraph);
+  font-size: 0.8em;
+  text-decoration: underline;
+  margin-top: 10px;
+  display: none;
+  max-height: 15px;
 }
-input[type="date"] {
-  -webkit-appearance: none;
-  height: 19px;
-  background-color: #fff;
+
+.footer {
+  position: fixed;
+  bottom: 0;
 }

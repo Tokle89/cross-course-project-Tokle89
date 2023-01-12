@@ -2,16 +2,21 @@ const productContainer = document.querySelector(".product-container");
 
 import { products } from "./products.js";
 
-console.log(products[0]);
+let productName = "Offpist jacket";
 
-function createHtml() {
-  productContainer.innerHTML = `<a href="products/offpist.html">
-                                 <img src=${products[0].img} alt=${products[0].name}>
-                                 <div class="product-container_text">
-                                  <p>${products[0].name}</p>
-                                  <p>${products[0].price}</p>
-                                 </div>
-                                </a>`;
-}
+const createHtml = (products) => {
+  products.forEach((product) => {
+    if (productName == product.name) {
+      productContainer.innerHTML = `
+                                     <a href="details.html?id=${product.name}">
+                                      <img src=${product.img} alt=${product.name}>
+                                      <div class="product-container_text">
+                                       <p>${product.name}</p>
+                                       <p>${product.price}</p>
+                                      </div>
+                                     </a>`;
+    }
+  });
+};
 
-createHtml();
+createHtml(products);

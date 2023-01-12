@@ -4,19 +4,20 @@ const id = params.get("id");
 const pageTitle = document.all[14];
 const metaContentDescription = document.all[5];
 const productSection = document.querySelector(".product-specific");
-const msg = document.querySelector(".cart");
-import { cart } from "./function/cart.js";
 import { products } from "./products.js";
-import { createCart } from "./function/cart.js";
-import { addItemToCart } from "./function/cart.js";
+import { createCart } from "./functions/cart.js";
+import { getCart } from "./functions/cart.js";
+import { addItemToCart } from "./functions/cart.js";
+
+let cart = getCart();
+createCart(cart);
 
 const product = products.find(({ name }) => name == id);
 
-const createHtml = (product) => {
-  pageTitle.innerHTML = product.name;
-  metaContentDescription.content = `view our amazing ${product.name}`;
+pageTitle.innerHTML = product.name;
+metaContentDescription.content = `view our amazing ${product.name}`;
 
-  productSection.innerHTML = `<div class="product-image__container">
+productSection.innerHTML = `<div class="product-image__container">
                    <img src=${product.img} alt=${product.name}>
                    <div class="product-image_thumbnails">
                     <div>
@@ -41,7 +42,7 @@ const createHtml = (product) => {
                   <p> The ${product.name} is made perfect for the adventurous. This jacket will make you comfortable and keep you warm and ready for 
                       your next adventure.
                   </p>
-                  <p class="price"> ${product.price}</p>
+                  <p class="price"> ${product.price} EUR</p>
                   <form  method="post"class="form">
                   <div>
                     <p>size:</p>
@@ -55,23 +56,11 @@ const createHtml = (product) => {
                 </form>
                 <button class="cta cta-cart">Add to cart</button>`;
 
-  return productSection.innerHTML;
-};
-
-createHtml(product);
-
 const btn = document.querySelector(".cta-cart");
-
-const displayMessage = () => {
-  msg.style.display = "block";
-};
 
 const sizeValue = document.querySelector("select");
 
 btn.onclick = function () {
   Object.assign(product, { size: sizeValue.value });
-  createCart(cart);
   addItemToCart(product);
-
-  console.log(product);
 };

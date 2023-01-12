@@ -19,7 +19,3 @@ const createHtml = (products) => {
 };
 
 createHtml(products);
-
-console.log(productsContainer);
-
-console.log(products);

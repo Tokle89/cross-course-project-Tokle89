@@ -7,8 +7,3 @@
   --tertiary-color: #000;
   --quaternary-color: #394271;
 }
-
-@font-face {
-  font-family: "nirmala";
-  src: url(../fonts/nirmala.ttf) format("truetype");
-}

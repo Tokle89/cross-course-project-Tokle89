@@ -12,7 +12,7 @@ h1,
 h2,
 nav a,
 .cta {
-  font-family: var(--font-heading), "Times New Roman", Times, serif;
+  font-family: var(--font-heading), Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.2em;
   font-weight: lighter;
   text-transform: capitalize;
