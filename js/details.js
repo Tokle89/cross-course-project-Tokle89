@@ -5,9 +5,10 @@ const pageTitle = document.all[14];
 const metaContentDescription = document.all[5];
 const productSection = document.querySelector(".product-specific");
 import { products } from "./products.js";
-import { createCart } from "./functions/cart.js";
-import { getCart } from "./functions/cart.js";
 import { addItemToCart } from "./functions/cart.js";
+import { getCart } from "./functions/cart.js";
+import { createCart } from "./functions/cart.js";
+import { displayCartTotal } from "./functions/cart.js";
 
 let cart = getCart();
 createCart(cart);
@@ -55,6 +56,8 @@ productSection.innerHTML = `<div class="product-image__container">
                   </div>
                 </form>
                 <button class="cta cta-cart">Add to cart</button>`;
+
+displayCartTotal();
 
 const btn = document.querySelector(".cta-cart");
 

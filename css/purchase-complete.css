@@ -13,10 +13,7 @@ main {
 .checkout > * {
   flex: 1;
 }
-.content-square {
-  margin: 10px;
-  padding: 15px;
-}
+
 .shoppingcart-content__product h2,
 .shoppingcart-content__product p {
   margin-bottom: 4px;
@@ -24,9 +21,4 @@ main {
 }
 .shipment-info p {
   margin: 8px 0px;
-}
-.reciet {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }

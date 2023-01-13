@@ -1,4 +1,8 @@
 const productContainer = document.querySelector(".product-container");
+import { getCart } from "./functions/cart.js";
+import { createCart } from "./functions/cart.js";
+let cart = getCart();
+createCart(cart);
 
 import { products } from "./products.js";
 

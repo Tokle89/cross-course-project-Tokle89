@@ -10,3 +10,17 @@ main {
 .h1 {
   margin-bottom: 50px;
 }
+.message-container {
+  text-align: center;
+  border-bottom: 2px solid var(--tertiary-color);
+  padding-bottom: 30px;
+}
+
+#msg_cta {
+  margin-top: 30px;
+}
+
+#msg_h2 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
