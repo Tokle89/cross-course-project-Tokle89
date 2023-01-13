@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Complete your purchase" />
+    <script src="https://kit.fontawesome.com/1f3258fb33.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/checkout.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <script defer type="module" src="js/cheeckout.js"></script>
+    <title>RainyDays | Homepage</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="header-top_container">
+          <a href="index.html" class="logo logo-header">Rainy Days</a>
+          <div class="social-media">
+            <h2>Follow us:</h2>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <a href="shoppingcart.html" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a>
+        <label for="hamburger-menu"><i class="fas fa-bars hamburger-btn"></i></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <a href="index.html" class="current">Home</a>
+          <a href="collection.html">Collection</a>
+          <a href="contact.html">Contact us</a>
+          <a href="about.html">About us</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>checkout</h1>
+      <section class="checkout">
+        <section class="shoppingcart-content content-square">
+          <div class="shoppingcart-content__product"></div>
+          <div class="checkout-info">
+            <div class="shipment-info">
+              <p>Shippment: 3-5 working days</p>
+              <p>Payment: An innvoice will be delivered</p>
+            </div>
+            <section class="cost">
+              <div class="cost-info">
+                <p>Sub total:</p>
+                <p class="sub-price">99 eur</p>
+              </div>
+              <div class="cost-info">
+                <p>Shipping:</p>
+                <p class="shipping-price">0 eur</p>
+              </div>
+              <div class="cost-info">
+                <p>Grand total:</p>
+                <p class="total-price">99 eur</p>
+              </div>
+            </section>
+          </div>
+        </section>
+        <section class="registrer">
+          <h2>Please registrer your information</h2>
+          <div class="form-wrapper">
+            <form action="purchase-complete.html" method="get">
+              <div class="form-div">
+                <label for="name">Full name</label>
+                <div class="form-error" id="name-error">Please enter your full name</div>
+              </div>
+              <input type="text" id="name" name="name" required />
+              <div class="form-div">
+                <label for="date">Day of birth</label>
+                <div class="form-error" id="date-error">Please enter your date of birth</div>
+              </div>
+              <input type="text" id="date" name="day of birth" required />
+              <div class="form-div">
+                <label for="email">E-mail</label>
+                <div class="form-error" id="email-error">Please enter your email address</div>
+              </div>
+              <input type="email" id="email" name="email" required />
+              <div class="form-div">
+                <label for="address">Street adress</label>
+                <div class="form-error" id="address-error">Please enter your street address</div>
+              </div>
+              <input type="text" id="address" name="address" required />
+              <div class="form-div">
+                <label for="city">city</label>
+                <div class="form-error" id="city-error">Please enter the name of the city you live in</div>
+              </div>
+              <input type="text" id="city" name="city" required />
+              <div class="form-div">
+                <label for="country">Country</label>
+                <div class="form-error" id="country-error">Please enter your country`s name</div>
+              </div>
+              <input type="text" id="country" name="country" required />
+              <button class="cta cta-form">CheckOut</button>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>copyright &copy;</footer>
+  </body>
+</html>

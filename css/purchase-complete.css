@@ -1,0 +1,24 @@
+main {
+  margin: 40px auto;
+}
+.h1 {
+  font-size: 0.8em;
+  padding: 10px;
+}
+.checkout {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+.checkout > * {
+  flex: 1;
+}
+
+.shoppingcart-content__product h2,
+.shoppingcart-content__product p {
+  margin-bottom: 4px;
+  text-decoration: underline;
+}
+.shipment-info p {
+  margin: 8px 0px;
+}

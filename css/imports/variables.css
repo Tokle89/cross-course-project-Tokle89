@@ -1,0 +1,9 @@
+:root {
+  --font-heading: "Source sans pro";
+  --font-paragraph: "Open Sans";
+  --font-logo: "Roboto";
+  --color-header__footer: #355881;
+  --secondary-color: #fff;
+  --tertiary-color: #000;
+  --quaternary-color: #394271;
+}

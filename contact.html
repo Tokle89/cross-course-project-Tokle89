@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="contact us at RainyDays" />
+    <script src="https://kit.fontawesome.com/1f3258fb33.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/contact.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <script defer type="module" src="js/contact.js"></script>
+    <title>RainyDays | Contact us</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="header-top_container">
+          <a href="index.html" class="logo logo-header">Rainy Days</a>
+          <div class="social-media">
+            <h2>Follow us:</h2>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com"><i class="fab fa-twitter-square"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="shopping-cart">
+          <a href="shoppingcart.html"><i class="fas fa-shopping-cart cart-symbol"></i></a>
+          <div class="cart-amount">0</div>
+        </div>
+        <label for="hamburger-menu"><i class="fas fa-bars hamburger-btn"></i></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="collection.html" class="current">Collection</a>
+          <a href="contact.html">Contact us</a>
+          <a href="about.html">About us</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="heading">
+        <h1>contact us</h1>
+      </div>
+      <section class="contact">
+        <div class="message">
+          <h2>Send us a direct message!</h2>
+          <form method="post">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" required />
+            <label for="message">Your message</label>
+            <textarea id="message" name="message"></textarea>
+            <input type="submit" value="send" class="cta cta-form" />
+          </form>
+        </div>
+        <div class="contact-info">
+          <h3>contact us by phone:</h3>
+          <div class="contact-info__content">
+            <i class="fas fa-phone-alt blue-i"></i>
+            <p>:+47 990-00-990</p>
+          </div>
+          <h3>contact us by mail:</h3>
+          <div class="contact-info__content">
+            <i class="fas fa-envelope blue-i"></i>
+            <p>:RainyDays@gmail.com</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>copyright &copy;</footer>
+  </body>
+</html>
