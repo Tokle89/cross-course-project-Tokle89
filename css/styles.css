@@ -12,7 +12,7 @@ body {
 }
 
 main {
-  min-width: 92%;
+  min-width: 80%;
   padding: 0px 15px;
   margin: 0 auto;
 }
@@ -43,7 +43,7 @@ header {
   position: sticky;
   top: 0px;
   z-index: 999;
-  margin-bottom: 5em;
+  margin-bottom: 2em;
 }
 .header-top {
   padding: 10px 10px;
@@ -62,14 +62,13 @@ nav {
   display: none;
   position: fixed;
   left: 0px;
-  top: 59px;
   background-color: var(--color-header__footer);
-  min-width: 250px;
+  min-width: 300px;
 }
 nav a {
   display: block;
   font-size: 1.2em;
-  padding: 30px 25px;
+  padding: 30px 50px;
   border-top: white solid 2px;
 }
 nav,
@@ -91,7 +90,7 @@ nav a {
 }
 .hamburger-btn {
   position: absolute;
-  top: 14px;
+  top: 0.75em;
   left: 2%;
   font-size: 2em;
 }
@@ -100,7 +99,7 @@ nav a {
   color: var(--secondary-color);
   position: absolute;
   right: 2%;
-  top: 1em;
+  top: 1.4em;
   z-index: 50;
   max-height: 28px;
 }
@@ -123,27 +122,27 @@ nav a {
 }
 
 .social-media {
-  position: absolute;
-  top: 3.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--color-header__footer);
-  background-color: #d9d8e3;
+  position: relative;
+  top: 10px;
+  background-color: var(--color-header__footer);
   display: flex;
   justify-content: center;
   gap: 15px;
-  padding: 10px;
-  width: 95%;
-  border-bottom: 2px solid var(--color-header__footer);
+  padding: 10px 0px;
+  border-top: 2px solid var(--secondary-color);
+  margin-top: 5px;
 }
 
 .social-media h2 {
   margin: auto 0px;
   font-size: 1.2em;
   font-weight: lighter;
+  color: var(--secondary-color);
 }
 .social-media i {
-  color: var(--color-header__footer);
+  color: var() --secondary-color;
+}
+.social-media i {
   margin-top: 3px;
 }
 /* product container  */
