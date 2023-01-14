@@ -28,10 +28,8 @@ export function cartIsEmptyMsg() {
                                   </div>
                                   </div>`;
 
-    const checkoutCta = document.querySelector("checkout-cta");
+    const checkoutCta = document.querySelector(".checkout-cta");
 
     checkoutCta.style.display = "none";
-
-    console.log(msgContainer);
   }
 }

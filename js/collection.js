@@ -1,6 +1,8 @@
 const productsContainer = document.querySelector(".products");
-
+import { displayCartTotal } from "./functions/cart.js";
 import { products } from "./products.js";
+import { createCart } from "./functions/cart.js";
+createCart();
 
 const createHtml = (products) => {
   productsContainer.innerHTML = "";
@@ -11,7 +13,7 @@ const createHtml = (products) => {
                                       <img src=${product.img} alt=${product.name}>
                                       <div class="product-container_text">
                                        <p>${product.name}</p>
-                                       <p>${product.price}</p>
+                                       <p>${product.price} EUR</p>
                                       </div>
                                      </a>
                                     </div>`;
@@ -19,3 +21,5 @@ const createHtml = (products) => {
 };
 
 createHtml(products);
+
+displayCartTotal();

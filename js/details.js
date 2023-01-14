@@ -6,12 +6,9 @@ const metaContentDescription = document.all[5];
 const productSection = document.querySelector(".product-specific");
 import { products } from "./products.js";
 import { addItemToCart } from "./functions/cart.js";
-import { getCart } from "./functions/cart.js";
 import { createCart } from "./functions/cart.js";
 import { displayCartTotal } from "./functions/cart.js";
-
-let cart = getCart();
-createCart(cart);
+createCart();
 
 const product = products.find(({ name }) => name == id);
 

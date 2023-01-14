@@ -1,6 +1,11 @@
+.collection {
+  padding: 0px 30px;
+}
+
 .collection__intro {
   max-width: 500px;
-  margin: 50px auto;
+  margin: 30px auto;
+  color: var(--color-header__footer);
 }
 .collection__intro p,
 .collection h1 {
@@ -26,7 +31,7 @@
   grid-template-columns: 1fr;
   gap: 100px;
   max-width: max-content;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 .products img {
   max-height: 250px;

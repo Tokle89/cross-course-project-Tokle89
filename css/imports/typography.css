@@ -3,7 +3,8 @@
   font-size: 2em;
 }
 p,
-li {
+li,
+label {
   font-family: var(--font-paragraph), Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.75em;
 }
@@ -16,4 +17,9 @@ nav a,
   font-size: 1.2em;
   font-weight: lighter;
   text-transform: capitalize;
+}
+
+h1,
+h2 {
+  color: var(--color-header__footer);
 }

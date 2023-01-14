@@ -13,7 +13,7 @@
     <link href="css/checkout.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
     <script defer type="module" src="js/cheeckout.js"></script>
-    <title>RainyDays | Homepage</title>
+    <title>RainyDays | CheckOut</title>
   </head>
   <body>
     <header>
@@ -29,7 +29,6 @@
         </div>
       </div>
       <div class="header-bottom">
-        <a href="shoppingcart.html" class="shopping-cart"><i class="fas fa-shopping-cart"></i></a>
         <label for="hamburger-menu"><i class="fas fa-bars hamburger-btn"></i></label>
         <input type="checkbox" id="hamburger-menu" />
         <nav>
@@ -38,6 +37,10 @@
           <a href="contact.html">Contact us</a>
           <a href="about.html">About us</a>
         </nav>
+        <div class="shopping-cart">
+          <a href="shoppingcart.html"><i class="fas fa-shopping-cart cart-symbol"></i></a>
+          <div class="cart-amount">0</div>
+        </div>
       </div>
     </header>
     <main>
@@ -86,8 +89,8 @@
               </div>
               <input type="email" id="email" name="email" required />
               <div class="form-div">
-                <label for="address">Street adress</label>
-                <div class="form-error" id="address-error">Please enter your street address</div>
+                <label for="address">Street</label>
+                <div class="form-error" id="address-error">Please enter your house address</div>
               </div>
               <input type="text" id="address" name="address" required />
               <div class="form-div">

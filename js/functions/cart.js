@@ -8,7 +8,7 @@ export function getCart() {
 }
 let cart = getCart();
 
-export function createCart(cart) {
+export function createCart() {
   if (!localStorage.getItem("cart")) {
     localStorage.setItem("cart", "[]");
   }
@@ -72,7 +72,7 @@ export function displayCartTotal() {
   if (cart.length == 0) {
     cartAmount.style.display = "none";
   } else {
-    cartAmount.style.display = "relative";
+    cartAmount.style.display = "block";
     cartAmount.innerHTML = cart.length;
   }
 }

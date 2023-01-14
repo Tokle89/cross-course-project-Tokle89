@@ -20,7 +20,7 @@ export const products = [
   {
     name: "Light jacket",
     price: 99,
-    img: "../images/casual-jacket.png",
+    img: "../images/light-jacket.png",
     id: 4,
   },
   {

@@ -3,13 +3,17 @@
 @import "imports/links.css";
 
 body {
-  margin: 0;
+  background-color: #d9d8e3;
+  min-height: 100vh;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }
 
 main {
-  max-width: 1400px;
+  min-width: 92%;
   padding: 0px 15px;
-  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -32,19 +36,21 @@ footer {
   font-size: 1.2em;
   max-height: 66px;
   width: 100%;
+  margin-top: 50px;
 }
 /*header*/
 header {
   position: sticky;
   top: 0px;
   z-index: 999;
+  margin-bottom: 5em;
 }
 .header-top {
   padding: 10px 10px;
 }
 .header-top_container,
 .header-bottom {
-  max-width: 1400px;
+  max-width: 1420px;
   text-align: center;
   margin: auto;
 }
@@ -85,8 +91,9 @@ nav a {
 }
 .hamburger-btn {
   position: absolute;
-  top: 0.6em;
+  top: 14px;
   left: 2%;
+  font-size: 2em;
 }
 
 .shopping-cart {
@@ -95,6 +102,7 @@ nav a {
   right: 2%;
   top: 1em;
   z-index: 50;
+  max-height: 28px;
 }
 .cart-symbol {
   z-index: 10;
@@ -111,20 +119,22 @@ nav a {
   left: 7px;
   font-weight: bold;
   font-family: var(--font-paragraph);
+  display: none;
 }
 
 .social-media {
   position: absolute;
-  top: 3.5rem;
+  top: 3.6rem;
   left: 50%;
   transform: translateX(-50%);
   color: var(--color-header__footer);
+  background-color: #d9d8e3;
   display: flex;
   justify-content: center;
-  width: 100%;
-  background-color: var(--secondary-color);
   gap: 15px;
-  padding: 5px;
+  padding: 10px;
+  width: 95%;
+  border-bottom: 2px solid var(--color-header__footer);
 }
 
 .social-media h2 {
@@ -139,8 +149,9 @@ nav a {
 /* product container  */
 .product-container {
   max-width: 250px;
-  box-shadow: 0px 3px 5px 2px rgba(34, 34, 34, 0.775);
+  box-shadow: 0px 1px 5px 2px rgba(34, 34, 34, 0.775);
   padding: 10px;
+  background-color: var(--secondary-color);
 }
 .product-container > * {
   color: var(--tertiary-color);
@@ -157,6 +168,7 @@ nav a {
   font-size: 0.85em;
   color: var(--tertiary-color);
 }
+/* form  */
 .form {
   display: flex;
   gap: 5em;
@@ -166,6 +178,15 @@ nav a {
   display: flex;
   align-content: flex-end;
   gap: 10px;
+}
+.form-error {
+  color: #ab051e;
+  font-family: var(--font-paragraph);
+  font-size: 0.8em;
+  text-decoration: underline;
+  margin-top: 10px;
+  display: none;
+  max-height: 15px;
 }
 
 form p,
@@ -226,9 +247,6 @@ select {
   margin-top: 8px;
 }
 
-.cart-item .cta {
-  max-height: 30px;
-}
 .cart-item_content {
   min-width: 200px;
   display: flex;
@@ -244,9 +262,7 @@ select {
   border: rgb(161, 0, 0);
   border-radius: 50px;
 }
-.shipment-info {
-  margin-top: 50px;
-}
+
 .shipment-info p {
   font-weight: bold;
   margin-top: 0px;
