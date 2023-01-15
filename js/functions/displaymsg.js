@@ -33,3 +33,18 @@ export function cartIsEmptyMsg() {
     checkoutCta.style.display = "none";
   }
 }
+
+export function msgIsSent() {
+  msg.style.display = "block";
+  msg.innerHTML = `<h2>Your message has been sent</h2>
+                   <p> We will try to answer you in 2-5 working days</p>
+                   <button class="cta close-button">close</button>`;
+  closeMsgIsSent();
+}
+
+function closeMsgIsSent(closeButton) {
+  closeButton = document.querySelector(".close-button");
+  closeButton.onclick = function () {
+    msg.style.display = "none";
+  };
+}
