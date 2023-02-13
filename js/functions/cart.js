@@ -31,12 +31,14 @@ export function addItemToCart(product) {
 }
 
 function createHtml(product) {
+  const imgSrc = product.images[0].src;
+  const price = product.prices.price;
   contentContainer.innerHTML += `<div class="cart-item">
                                   <div class="cart-item_content">
-                                   <img src=${product.img} alt=${product.name}>
+                                   <img src=${imgSrc} alt=${product.name}>
                                    <div>
                                     <h2>${product.name}</h2>
-                                    <p>${product.price} Eur</p>
+                                    <p>${price} Eur</p>
                                    </div>
                                   </div>
                                    <button class="cta delete-btn" id=${product.id}>Remove</button>

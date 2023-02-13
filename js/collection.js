@@ -1,5 +1,6 @@
 const url = "https://fredrik-tokle.no/schooltesting/rainy-days/wp-json/wc/store/products?_embeded";
 const productsContainer = document.querySelector(".products");
+const spinnerContainer = document.querySelector(".spinner");
 import { displayCartTotal } from "./functions/cart.js";
 import { createCart } from "./functions/cart.js";
 createCart();
@@ -14,8 +15,7 @@ async function getProducts() {
 }
 
 const createHtml = (products) => {
-  productsContainer.innerHTML = "";
-
+  spinnerContainer.style.display = "none";
   products.forEach((product) => {
     let imgSrc = product.images[0].src;
     productsContainer.innerHTML += `<div class="product-container">

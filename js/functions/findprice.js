@@ -9,7 +9,8 @@ let sum = 0;
 
 export function findTotalPrice() {
   for (let i = 0; i < cart.length; i++) {
-    sum += cart[i].price;
+    sum += parseFloat(cart[i].prices.price);
+    console.log(sum);
   }
 
   subTotal.innerHTML = sum + ` EUR`;
