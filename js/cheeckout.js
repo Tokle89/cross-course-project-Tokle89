@@ -7,7 +7,7 @@ import { displayCartTotal } from "./functions/cart.js";
 let cart = getCart();
 displayCart(cart);
 
-export const deleteBtn = document.querySelectorAll(".delete-btn");
+const deleteBtn = document.querySelectorAll(".delete-btn");
 
 removeFromCart(deleteBtn);
 

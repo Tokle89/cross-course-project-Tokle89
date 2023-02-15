@@ -55,6 +55,7 @@ export function displayCart(cart) {
   }
 }
 
+
 export function removeFromCart(buttons) {
   buttons.forEach((button) => {
     button.onclick = function () {
