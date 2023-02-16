@@ -8,4 +8,4 @@ findTotalPrice();
 
 displayCart(cart);
 
-// localStorage.clear();
+localStorage.clear();
