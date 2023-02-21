@@ -1,4 +1,6 @@
 import { createProductContainer } from "./createElements.js";
+import { createImgContainer } from "./createElements.js";
+import { createTextContainer } from "./createElements.js";
 
 export function renderProductForHomePage(products) {
   products.forEach((product) => {
@@ -28,4 +30,10 @@ function renderProduct(product) {
   featuredProductContainer.append(productContainer);
 }
 
-function renderDetailedProduct() {}
+export function renderDetailedProduct(product) {
+  const productContainer = document.querySelector(".product-specific");
+  const imgContainer = createImgContainer("product-image__container", product);
+  const textContainer = createTextContainer("product-specific__details", product);
+
+  productContainer.append(imgContainer, textContainer);
+}

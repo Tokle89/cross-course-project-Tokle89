@@ -54,7 +54,16 @@ export function displayCart(cart) {
     });
   }
 }
+export function addToCart(product) {
+  const btn = document.querySelector(".cta-cart");
 
+  const sizeValue = document.querySelector("select");
+
+  btn.onclick = function () {
+    Object.assign(product, { size: sizeValue.value });
+    addItemToCart(product);
+  };
+}
 
 export function removeFromCart(buttons) {
   buttons.forEach((button) => {

@@ -152,6 +152,11 @@ nav a {
   padding: 10px;
   background-color: var(--secondary-color);
 }
+.product-container img {
+  height: 270px;
+  max-width: 230px;
+  object-fit: contain;
+}
 .product-container > * {
   color: var(--tertiary-color);
 }
@@ -164,7 +169,7 @@ nav a {
 .product-container_text > * {
   margin: 12px 0px;
   font-weight: bold;
-  font-size: 0.85em;
+  font-size: 0.9em;
   color: var(--tertiary-color);
 }
 /* form  */
@@ -302,8 +307,8 @@ select {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  border: 6px solid #fff;
-  border-color: #fff transparent #fff transparent;
+  border: 6px solid #ffffff;
+  border-color: var(--color-header__footer) transparent var(--color-header__footer) transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {

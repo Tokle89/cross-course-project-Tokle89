@@ -16,8 +16,7 @@
   margin: auto;
 }
 .product-image__container img {
-  border: solid 1px var(--tertiary-color);
-  box-shadow: 0px 3px 5px 2px rgba(34, 34, 34, 0.775);
+  box-shadow: 0px 1px 3px 0px rgba(104, 104, 104, 0.775);
 }
 .product-image__container img {
   max-height: 280px;
@@ -93,4 +92,8 @@ li:before {
 footer {
   position: fixed;
   bottom: 0;
+}
+
+.spinner {
+  flex: 0 1 auto;
 }
