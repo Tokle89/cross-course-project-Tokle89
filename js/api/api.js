@@ -16,7 +16,9 @@ export async function getProductForHomePage() {
     const products = result;
     renderProductForHomePage(products);
     removeSpinner();
-  } catch (error) {}
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export async function getProducts() {
@@ -38,14 +40,13 @@ export async function getDetailedProduct(id) {
 
     const response = await fetch(detailedUrl);
     const result = await response.json();
-    console.log(result);
     pageTitle.innerHTML = result.name;
     metaContentDescription.content = `View our amazing ${result.name}`;
     renderDetailedProduct(result);
     removeSpinner();
     addToCart(result);
   } catch (error) {
-    console.error(error);
+    console.log(error);
   }
 }
 

@@ -4,10 +4,8 @@ import { createTextContainer } from "./createElements.js";
 
 export function renderProductForHomePage(products) {
   products.forEach((product) => {
-    if (product.name == "Offpist Jacket") {
+    if (product.name === "Offpist Jacket") {
       renderHomePageProduct(product);
-      console.log("hello");
-    } else {
     }
   });
 }
@@ -32,8 +30,8 @@ function renderProduct(product) {
 
 export function renderDetailedProduct(product) {
   const productContainer = document.querySelector(".product-specific");
-  const imgContainer = createImgContainer("product-image__container", product);
-  const textContainer = createTextContainer("product-specific__details", product);
+  const imgContainer = createImgContainer(product);
+  const textContainer = createTextContainer(product);
 
   productContainer.append(imgContainer, textContainer);
 }

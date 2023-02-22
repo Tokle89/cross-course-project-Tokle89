@@ -1,164 +1,105 @@
 export function createProductContainer(product) {
-  const element = document.createElement("div");
-  element.className = "product-container";
-  const link = createLink(`details.html?id=${product.id}`, product);
-  element.append(link);
-  return element;
-}
-
-export function createLink(link, product) {
-  const element = document.createElement("a");
-  element.href = link;
-
-  const imgSrc = product.images[0].src;
+  const productName = product.name;
   const price = product.prices.price;
-  const productName = product.name;
+  const imgSrc = product.images[0].src;
 
-  const img = createImg(imgSrc, productName);
-  const textContainer = createProductTextContainer(productName, price);
-  element.append(img, textContainer);
-  return element;
-}
+  const p = createElement("p", undefined, undefined, productName);
+  const secondP = createElement("p", undefined, undefined, `${price} Eur`);
+  const productTextContainer = createElement("div", ["product-container_text"], [p, secondP]);
 
-function createImg(src, alt) {
-  const element = document.createElement("img");
-  element.src = src;
-  element.alt = alt;
-  return element;
-}
-function createProductTextContainer(productName, price) {
-  const element = document.createElement("div");
-  element.className = "product-container_text";
-  const p = createP(productName);
-  const secondP = createSecondP(`${price} Eur`);
+  const img = createElement("img", undefined, undefined, undefined, undefined, imgSrc, productName);
+  const link = createElement("a", undefined, [img, productTextContainer], undefined, `details.html?id=${product.id}`);
 
-  element.append(p, secondP);
-  return element;
-}
-function createH1(innerText) {
-  const element = document.createElement("h1");
-  element.innerText = innerText;
-  return element;
-}
-function createP(innerText, className) {
-  const element = document.createElement("p");
-  element.innerText = innerText;
-  if (className) {
-    element.classList.add(className);
-  }
-  return element;
-}
+  const productContainer = createElement("div", ["product-container"], [link]);
 
-function createSecondP(innerText) {
-  const element = document.createElement("p");
-  element.innerText = innerText;
-
-  return element;
+  return productContainer;
 }
-
-export function createImgContainer(className, product) {
-  const element = document.createElement("div");
-  element.className = className;
+export function createImgContainer(product) {
   const productName = product.name;
   const imgSrc = product.images[0].src;
 
-  const img = createImg(imgSrc, productName);
+  const img = createElement("img", undefined, undefined, undefined, undefined, imgSrc, productName);
+  const thumbnailContainer = createThumbnailContainer(imgSrc, productName);
+  const imgContainer = createElement("div", ["product-image__container"], [img, thumbnailContainer]);
 
-  const thumbnail = createThumbnailContainer("product-image_thumbnails", product);
-
-  element.append(img, thumbnail);
-  return element;
+  return imgContainer;
 }
-function createThumbnailContainer(className, product) {
-  const element = document.createElement("div");
-  element.className = className;
+function createThumbnailContainer(imgSrc, productName) {
+  const img = createElement("img", undefined, undefined, undefined, undefined, imgSrc, productName);
 
-  const productName = product.name;
-  const imgSrc = product.images[0].src;
-
-  const thumbnail = createThumbnail(imgSrc, productName);
+  const thumbnail = createElement("div", undefined, [img]);
   const secondThumbnail = thumbnail.cloneNode(true);
   const thirdThumbnail = thumbnail.cloneNode(true);
 
-  element.append(thumbnail, secondThumbnail, thirdThumbnail);
+  const thumbnailContainer = createElement("div", ["product-image_thumbnails"], [thumbnail, secondThumbnail, thirdThumbnail]);
 
-  return element;
-}
-function createThumbnail(imgSrc, productName) {
-  const element = document.createElement("div");
-
-  const img = createImg(imgSrc, productName);
-  element.append(img);
-
-  return element;
+  return thumbnailContainer;
 }
 
-export function createTextContainer(className, product) {
-  const element = document.createElement("div");
-  element.className = className;
+export function createTextContainer(product) {
   const productName = product.name;
   const price = product.prices.price;
+  console.log(product.name);
 
-  const h1 = createH1(productName);
+  const h1 = createElement("h1", undefined, undefined, `${productName}`);
   const productDescription = createProductDescription(product);
-  const p = createP(`${price} Eur`, "price");
-  const form = CreateForm();
-  const button = createButton("Add to cart", "cta cta-cart");
+  const p = createElement("p", ["price"], undefined, `${price} Eur`);
+  const form = createForm();
+  const button = createElement("button", ["cta", "cta-cart"], undefined, "Add to cart");
+  const textContainer = createElement("div", ["product-specific_details"], [h1, productDescription, p, form, button]);
 
-  element.append(h1, productDescription, p, form, button);
-  return element;
+  return textContainer;
 }
 
 function createProductDescription(product) {
-  const element = document.createElement("div");
+  const productDescription = createElement("div");
 
   const string = product.description;
-  element.innerHTML = string;
-  return element;
+  productDescription.innerHTML = string;
+  return productDescription;
 }
-
-function CreateForm() {
-  const element = document.createElement("form");
-  element.name = "size";
-
-  const div = createDiv();
-  const p = createP("size");
+function createForm() {
+  const p = createElement("p", undefined, undefined, "Size:");
   const select = createSelect();
-
-  div.append(p, select);
-  element.append(div);
-  return element;
+  const div = createElement("div", undefined, [p, select]);
+  const form = createElement("form", undefined, [div]);
+  form.name = "size";
+  return form;
 }
-
 function createSelect() {
-  const element = document.createElement("select");
-  element.name = "size";
+  const select = createElement("select");
+  select.name = "size";
 
-  const option1 = document.createElement("option");
+  const option1 = createElement("option", undefined, undefined, "Small");
   option1.value = "small";
-  option1.innerText = "Small";
-  const option2 = document.createElement("option");
+  const option2 = createElement("option", undefined, undefined, "Medium");
   option2.value = "medium";
-  option2.innerText = "Medium";
-  const option3 = document.createElement("option");
+  const option3 = createElement("option", undefined, undefined, "large");
   option3.value = "large";
-  option3.innerText = "Large";
-  const option4 = document.createElement("option");
-  option4.value = "xtra large";
-  option4.innerText = "Xtra Large";
+  const option4 = createElement("option", undefined, undefined, "Xtra Large");
+  option4.value = "Xtra large";
 
-  element.append(option1, option2, option3, option4);
-  return element;
+  select.append(option1, option2, option3, option4);
+  return select;
 }
 
-function createDiv() {
-  const element = document.createElement("div");
-  return element;
-}
-
-function createButton(innerText, className) {
-  const element = document.createElement("button");
-  element.innerText = innerText;
-  element.className = className;
+function createElement(tagName, classes, children, text, link, src, alt) {
+  const element = document.createElement(tagName);
+  if (Array.isArray(classes) && classes) {
+    element.classList.add(...classes);
+  }
+  if (Array.isArray(children) && children.length) {
+    element.append(...children);
+  }
+  if (text) {
+    element.innerText = text;
+  }
+  if (link) {
+    element.href = link;
+  }
+  if (tagName === "img") {
+    element.src = src;
+    element.alt = alt;
+  }
   return element;
 }
