@@ -1,5 +1,7 @@
 # Rainy Days
 
+![Rainy days](https://github.com/Tokle89/cross-course-project-Tokle89/assets/94007467/4561e319-794a-4756-b7d8-ca7c1a065651)
+
 Created a web application for a web shop called Rainy Days in my cross course project in school.
 
 ## Description
