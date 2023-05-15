@@ -4,7 +4,7 @@ Created a web application for a web shop called Rainy Days in my cross course pr
 
 ## Description
 
-Was tasked with designing and creating a web application called Rainy Days. A online shop selling men`s  and women`s rain jackets.
+Was tasked with designing and creating a web application called Rainy Days. A online shop selling rain jackets.
 Created a web application using html, css and javascript. The user has to be able teh site easily. be able to add a jacket or jackets to the shopping cart, type in his information on the checkout page adn complete the purchase.
 
 Site architecture:
