@@ -4,8 +4,10 @@ Created a web application for a web shop called Rainy Days in my cross course pr
 
 ## Description
 
-Was tasked with designing and creating a web application called Rainy Days. A online shop selling rain jackets.
-Created a web application using html, css and javascript. The user has to be able teh site easily. be able to add a jacket or jackets to the shopping cart, type in his information on the checkout page adn complete the purchase.
+Was tasked with designing and creating a website called Rainy Days. A online shop selling rain jackets.
+The website is created on Html, Css and Javascript.
+The user has to be able maneuver the site easily. And be able to add a jacket or jackets to the shopping cart, complete the purchase.
+After the user have completed the purchase he will be taken to a purchase complete page, where he is given a receipt and a message that the purchase was complete.
 
 Site architecture:
 
@@ -14,23 +16,17 @@ Site architecture:
 - Details page ( showing the specific jacket the user clicked on)
 - Checkout page
 - A checkout success page
-- About us page
-- Contact us page
+- About page
+- Contact page
 
-The products is saved in Wordpress Cms, and fetched trough api calls and rendered to the page.
-
-In order to get let the user save jackets in the shopping cart, i made a createCart function in the cart.js that if a cart array does not exist in localstorage. Creates a empty cart array. So when the user adds a jacket, the jacket gets saved in local storage.
-After a purchase is complete, the local storage is cleared.
-
-Also created a function thats checks and updates the total price accordingly when a user ands or removes a jacket from the cart.
-
-In order to create a dynamic details page, a Query string is used go get the products id. and fetch and render that product on the details page.
+The products are created in a Wordpress headless cms
 
 ## Built With
 
 - Html
 - Css
 - javascript
+- Wordpress Headless Cms
 
 ## Getting Started
 
@@ -51,6 +47,10 @@ To run the app, run the following commands:
 ```bash
 npm run start
 ```
+
+## Contribution
+
+If you would like to contribute to my project - Just make a pull request and push your changes
 
 ## Contact
 
