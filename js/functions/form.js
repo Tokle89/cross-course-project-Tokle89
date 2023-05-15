@@ -16,6 +16,7 @@ const messageError = document.querySelector("#message-error");
 export function validateForm() {
   if (fullName) {
     fullName.addEventListener("keydown", function () {
+      console.log(fullName.value);
       if (checkLength(fullName.value, 5) === true) {
         fullNameError.style.display = "none";
       } else {
