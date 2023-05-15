@@ -6,7 +6,9 @@ Created a web application for a web shop called Rainy Days in my cross course pr
 
 Was tasked with designing and creating a website called Rainy Days. A online shop selling rain jackets.
 The website is created on Html, Css and Javascript.
-The user has to be able maneuver the site easily. And be able to add a jacket or jackets to the shopping cart, complete the purchase.
+
+The user has to be able maneuver the site easily. Be able to add products to the shopping cart, and complete the purchase.
+
 After the user have completed the purchase he will be taken to a purchase complete page, where he is given a receipt and a message that the purchase was complete.
 
 Site architecture:
