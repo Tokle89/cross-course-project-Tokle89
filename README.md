@@ -37,12 +37,10 @@ The products are created in a Wordpress headless cms
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 ```bash
-git clone git@github.com: Tokle89/cross-course-project-Tokle89.git
+git clone git@github.com:Tokle89/cross-course-project-Tokle89.git
 ```
 
 ### Running
@@ -58,7 +56,5 @@ npm run start
 If you would like to contribute to my project - Just make a pull request and push your changes
 
 ## Contact
-
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
 [My LinkedIn page](https://www.linkedin.com/in/fredrik-tokle-0994a023b/)
